@@ -32,7 +32,11 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # User added apps
-    'main.apps.MainConfig',
+    'meme.apps.MemeConfig',
+    'users.apps.UsersConfig',
+
+    # third party apps manually added
+    'crispy_forms',
 
     # Preincluded apps
     'django.contrib.admin',
@@ -122,3 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+CRISPY_TEMPLATE_PACK ='bootstrap4'
+
+LOGIN_REDIRECT_URL = 'Memendr'
+LOGIN_URL = 'login'
+
