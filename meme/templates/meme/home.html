@@ -1,7 +1,10 @@
 {% extends "meme/base.html" %}
 {% block content %}
     {% for meme in memes %}
+    <div class='container'>
         <h1> {{meme.title}} </h1>
-        <img src={{meme.img}} />
+        <img src={{meme.img.url}} />
+        <p>Posted by {{meme.posted_by}} </p>
+    </div>
     {% endfor %}
 {% endblock content %}
