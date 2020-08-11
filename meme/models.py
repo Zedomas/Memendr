@@ -1,9 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.urls import reverse
+from PIL import Image
 
 class Meme(models.Model):
     title = models.CharField(max_length=75)
-    img= models.ImageField(upload_to="meme_pics")
+    image = models.ImageField(upload_to="meme_pics")
     likes = models.IntegerField(default=0)
     dislikes = models.IntegerField(default=0)
     favorites = models.IntegerField(default=0)
@@ -13,4 +15,13 @@ class Meme(models.Model):
 
     def __str__(self):
         return self.title
+
+
+    def save(self):
+        super().save()
+
+        img = Image.open(self.image.path)
+        if img.height > 600 or img.width > 600:
+            output_size = (600, 600)
+            img.thumbnail(output_size)
 

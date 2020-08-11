@@ -1,0 +1,9 @@
+{% extends "meme/base.html" %}
+{% block content %}
+<div class='container'>
+    <h1> HELLO </h1>
+    <h1> {{object.title}} </h1>
+    <img src={{object.image.url}} />
+    <p>Posted by {{object.posted_by}} </p>
+</div>
+{% endblock content %}
