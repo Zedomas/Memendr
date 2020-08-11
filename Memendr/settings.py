@@ -26,7 +26,7 @@ SECRET_KEY = '(s!-b*a=2gcug4jn67gs9mevc$w1*h^6f&_1q6d59$e2xm(!af'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["memendr.herokuapp.com"]
+ALLOWED_HOSTS = ["memendr.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -137,3 +137,11 @@ CRISPY_TEMPLATE_PACK ='bootstrap4'
 LOGIN_REDIRECT_URL = 'Memendr'
 LOGIN_URL = 'login'
 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = os.environ.get('EMAIL_USER')
+print(EMAIL_HOST_USER)
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASS')
+print(EMAIL_HOST_PASSWORD)
