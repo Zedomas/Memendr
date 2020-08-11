@@ -26,7 +26,7 @@ SECRET_KEY = '(s!-b*a=2gcug4jn67gs9mevc$w1*h^6f&_1q6d59$e2xm(!af'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["memendr.herokuapp.com"]
 
 
 # Application definition
