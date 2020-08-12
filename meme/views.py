@@ -46,6 +46,7 @@ class MemeDetailView(DetailView):
 class MemeCreateView(LoginRequiredMixin, CreateView):
     model = Meme
     fields = ['title', 'image']
+    success_url = '/'
 
     def form_valid(self, form):
         form.instance.posted_by = self.request.user

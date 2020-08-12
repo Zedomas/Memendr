@@ -30,10 +30,10 @@
                                 <a class="nav-link" href="{% url 'profile' %}">Profile</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="meme/new/">Add a Meme</a>
+                                <a class="nav-link" href="{% url 'meme-create' %}"">Add a Meme</a>
                             </li>
                         {% endif %}
-                        
+
                     </ul>
                     <div class="navbar-nav">
                         {% if user.is_authenticated %}
