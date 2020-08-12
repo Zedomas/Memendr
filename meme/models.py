@@ -17,11 +17,11 @@ class Meme(models.Model):
         return self.title
 
 
-    def save(self):
-        super().save()
+    # def save(self, *args, **kwargs):
+    #     super().save(*args, **kwargs)
 
-        img = Image.open(self.image.path)
-        if img.height > 600 or img.width > 600:
-            output_size = (600, 600)
-            img.thumbnail(output_size)
+    #     img = Image.open(self.image.path)
+    #     if img.height > 600 or img.width > 600:
+    #         output_size = (600, 600)
+    #         img.thumbnail(output_size)
 
