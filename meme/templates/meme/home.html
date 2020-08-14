@@ -1,10 +1,16 @@
 {% extends "meme/base.html" %}
 {% block content %}
-    <h1> <a href='meme/{{meme.pk}}'> {{meme.title}}</a> </h1>
-    <img src={{meme.image.url}} />
-    <p>Posted by {{meme.posted_by}} </p>
-    <p>Dislikes: {{meme.dislikes}}</p>
-    <a href='meme/{{meme.pk}}/dislike'>Dislike</a>
-    <p>Likes: {{meme.likes}}</p>
-    <a href='meme/{{meme.pk}}/like'>Like</a>
+<div class="meme">
+    <div class="title">
+        <h1> <a href='meme/{{meme.pk}}'> {{meme.title}}</a> </h1>
+    </div>
+    <img class="memeimg" src={{meme.image.url}} />
+    <p class="author">Posted by {{meme.posted_by}} </p>
+    <div class="likes">
+        <p>Likes: {{meme.likes}}</p>
+        <a href='meme/{{meme.pk}}/like' class="like-btn">  </a>
+        <p>Dislikes: {{meme.dislikes}}</p>
+        <a href='meme/{{meme.pk}}/dislike' class="dislike-btn"> </a> 
+    </div>
+</div>
 {% endblock content %}

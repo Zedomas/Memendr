@@ -1,0 +1,53 @@
+.meme {
+    height: 80%;
+    width: 80%;
+    border-width: 3px;
+    border-style: solid;
+    margin: 15%;
+    background-color: white;
+    padding: 0;
+}
+
+.memeimg {
+    height: 80%;
+    width: 100%;
+}
+.likes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5%;
+    border-top: solid;
+}
+
+body {
+    background: rgb(9,10,121);
+    background: linear-gradient(90deg, rgba(9,10,121,0.9399538106235565) 0%, rgba(5,146,184,1) 44%, rgba(255,131,0,1) 100%);
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.like-btn {
+    background-image: url("https://image.flaticon.com/icons/svg/1533/1533907.svg");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+
+}
+
+.dislike-btn {
+    background-image: url("https://image.flaticon.com/icons/svg/1533/1533915.svg");
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+
+}
+
+.author {
+    margin: 0;
+    width: 25%;
+}
