@@ -2,15 +2,17 @@
 {% load crispy_forms_tags %}
 {% block content %}
     <h2> {{user.username}} </h2>
-    <form method="POST">
-            {% csrf_token %}
-            <fieldset class ="form-group">
-                <legend class="border-bottom mb-4">Profile Info</legend>
-                {{ u_form| crispy }}
-                {{ p_form| crispy }}
-            </fieldset>
-            <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Update</button>
-            </div>
-    </form>
+    <div class="memes">
+        <form method="POST">
+                {% csrf_token %}
+                <fieldset class ="form-group">
+                    <legend class="border-bottom mb-4">Profile Info</legend>
+                    {{ u_form| crispy }}
+                    {{ p_form| crispy }}
+                </fieldset>
+                <div class="form-group">
+                    <button class="btn btn-info" type="submit">Update</button>
+                </div>
+        </form>
+    </div>
 {% endblock content %}
