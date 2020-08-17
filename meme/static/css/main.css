@@ -1,16 +1,16 @@
 .meme {
-    height: 600px;
+    height: 750px;
     width: 600px;
     border-width: 3px;
     border-style: solid;
     margin: auto;
     background-color: white;
     padding: 0;
-    margin-top: 8%;
+    margin-top: 5%;
 }
 
 .memeimg {
-    height: 60%;
+    height: 75%;
     width: 100%;
 }
 .likes {
