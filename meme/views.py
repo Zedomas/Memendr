@@ -61,3 +61,10 @@ class MemeUpdateView(UpdateView):
         form.instance.posted_by = self.request.user
         return super().form_valid(form)
 
+
+class MemeListView(ListView):
+    model = Meme
+    template_name = 'meme/show.html'
+    context_object_name = 'memes'
+    ordering = ['-title']
+    paginate_by = 4
