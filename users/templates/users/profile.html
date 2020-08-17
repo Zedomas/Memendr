@@ -1,7 +1,6 @@
 {% extends "meme/base.html" %}
 {% load crispy_forms_tags %}
 {% block content %}
-    <h2> {{user.username}} </h2>
     <div class="memes">
         <form method="POST">
                 {% csrf_token %}
