@@ -14,7 +14,6 @@ from .models import Meme
 
 def home(request):
     index = random.randrange(1, (len(Meme.objects.all()) + 1))
-    print(index)
     info = {
         'meme': Meme.objects.get(pk=index)
     }
